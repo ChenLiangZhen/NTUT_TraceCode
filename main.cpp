@@ -9,6 +9,7 @@
 #include "questions/transportation.h"
 #include "questions/mathVector.h"
 #include "questions/complexNumber.h"
+#include "questions/fibonacciN.h"
 
 enum QList {
     snippet,
@@ -21,7 +22,8 @@ enum QList {
     stack,
     transportation,
     mathVector,
-    complexNumber
+    complexNumber,
+    fibonacciN,
 };
 
 class Questions {
@@ -167,6 +169,11 @@ public:
 
                 execute_complex_number();
             }
+
+            case QList::fibonacciN: {
+
+                execute_fibonacci_n();
+            }
         }
     }
 };
@@ -175,7 +182,7 @@ public:
 int main() {
 
     auto *q = new Questions();
-    q->showAnswers(QList::appleColor);
+    q->showAnswers(QList::fibonacciN);
 
     delete q;
     return EXIT_SUCCESS;
