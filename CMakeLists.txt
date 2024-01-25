@@ -16,4 +16,5 @@ add_executable(TraceCode main.cpp
         questions/catToy.h
         questions/mathVector.h
         questions/complexNumber.h
-        questions/fibonacciN.h)
+        questions/fibonacciN.h
+        questions/cardGame.h)

@@ -10,6 +10,7 @@
 #include "questions/mathVector.h"
 #include "questions/complexNumber.h"
 #include "questions/fibonacciN.h"
+#include "questions/cardGame.h"
 
 enum QList {
     snippet,
@@ -24,6 +25,7 @@ enum QList {
     mathVector,
     complexNumber,
     fibonacciN,
+    cardGame
 };
 
 class Questions {
@@ -174,6 +176,11 @@ public:
 
                 execute_fibonacci_n();
             }
+
+            case QList::cardGame: {
+
+                execute_card_game();
+            }
         }
     }
 };
@@ -182,7 +189,7 @@ public:
 int main() {
 
     auto *q = new Questions();
-    q->showAnswers(QList::fibonacciN);
+    q->showAnswers(QList::cardGame);
 
     delete q;
     return EXIT_SUCCESS;
